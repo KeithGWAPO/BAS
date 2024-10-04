@@ -9,8 +9,8 @@ header {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    position: relative; /* Position relative for layout */
-    z-index: 100; /* Ensure header is above other content */
+    position: relative;
+    z-index: 100;
 }
 
 .header-content {
@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-    width: 50px; /* Adjust size as needed */
+    width: 50px;
     height: auto;
     margin-right: 15px;
 }
@@ -34,9 +34,9 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(80vh - 60px); /* Adjust height to account for header */
+    height: calc(80vh - 60px);
     padding: 20px;
-    margin-top: 10px; /* Add space between header and container */
+    margin-top: 10px;
 }
 
 .login-box {
@@ -57,13 +57,13 @@ header h1 {
 
 .title h1 {
     margin: 0;
-    font-size: 60px; /* Default size */
+    font-size: 60px;
 }
 
 /* Media query for 1000px and below */
 @media (max-width: 1000px) {
     .title h1 {
-        font-size: 40px; /* Change to 40px when screen width is 1000px or less */
+        font-size: 40px;
     }
 }
 
@@ -133,7 +133,7 @@ button:hover {
     input[type="password"],
     button {
         padding: 10px;
-        width: 100%; /* Ensures the width is consistent on small screens */
+        width: 100%;
     }
 }
 
@@ -142,7 +142,7 @@ button:hover {
     input[type="password"],
     button {
         padding: 10px;
-        width: 100%; /* Ensures alignment and full width on smaller screens */
+        width: 100%;
     }
 
     .title h1 {
