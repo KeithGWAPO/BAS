@@ -1,0 +1,152 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* User button */
+.user-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.user-button:hover {
+    background-color: #f0f0f0;
+}
+
+.avatar-frame {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Main container for dashboard */
+.dashboard-container {
+    display: flex;
+}
+
+/* Sidebar navigation */
+.sidebar {
+    width: 60px; /* Width when collapsed */
+    background-color: #333;
+    height: 100vh;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+.sidebar:hover {
+    width: 250px; /* Width when expanded */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for icons and text */
+.icon {
+    display: inline-block;
+    width: 30px; /* Set width for icons */
+    text-align: center;
+}
+
+.text {
+    margin-left: 10px; /* Space between icon and text */
+    visibility: hidden; /* Hide text by default */
+    opacity: 0; /* Hide text by default */
+    transition: visibility 0s 0.3s, opacity 0.3s linear; /* Smooth transition */
+}
+
+/* Show text only when expanded */
+.sidebar:hover .text {
+    visibility: visible; /* Show text when expanded */
+    opacity: 1; /* Show text when expanded */
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 460px) {
+    .sidebar {
+        position: fixed;
+        left: -200px;
+    }
+
+    .sidebar:hover {
+        left: 0;
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 60px;
+    }
+}
