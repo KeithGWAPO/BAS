@@ -82,7 +82,6 @@ h1 {
     height: 100vh;
     transition: width 0.3s ease;
     position: relative;
-    overflow: hidden; /* Hide overflow */
 }
 
 .sidebar:hover {
@@ -116,15 +115,32 @@ h1 {
 
 .text {
     margin-left: 10px; /* Space between icon and text */
+    transition: opacity 0.3s ease;
+}
+
+/* Hide text when collapsed */
+.sidebar {
+    overflow: hidden; /* Hide overflow when collapsed */
+}
+
+.sidebar:hover .text {
+    opacity: 1; /* Show text when expanded */
+}
+
+/* Make the text invisible when collapsed */
+.sidebar:hover .text {
+    visibility: visible; /* Show text when expanded */
+}
+
+.sidebar .text {
     visibility: hidden; /* Hide text by default */
     opacity: 0; /* Hide text by default */
     transition: visibility 0s 0.3s, opacity 0.3s linear; /* Smooth transition */
 }
 
-/* Show text only when expanded */
 .sidebar:hover .text {
     visibility: visible; /* Show text when expanded */
-    opacity: 1; /* Show text when expanded */
+    opacity: 1;
 }
 
 /* Main content area */
@@ -134,19 +150,41 @@ h1 {
     background-color: white;
 }
 
+.stats-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px;
+}
+
+/* Button styles */
+.stat-button {
+    background-color: #a71e1e;
+    color: rgb(48, 17, 17);
+    padding: 20px 30px; /* Increased padding for larger buttons */
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Increase font size for better visibility */
+    flex: 1; /* Allow buttons to grow equally */
+    max-width: 200px; /* Set a max width for buttons */
+}
+
+.stat-button:hover {
+    background-color: #444;
+}
+
 /* Responsive behavior */
-@media screen and (max-width: 460px) {
-    .sidebar {
-        position: fixed;
-        left: -200px;
+@media screen and (max-width: 768px) {
+    .stats-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center items vertically */
     }
 
-    .sidebar:hover {
-        left: 0;
-        width: 200px;
-    }
-
-    .content {
-        margin-left: 60px;
+    .stat-button {
+        width: 100%; /* Full width for buttons on small screens */
+        max-width: none; /* Remove max width on small screens */
     }
 }

@@ -25,16 +25,24 @@
     <div class="dashboard-container">
         <nav class="sidebar" id="sidebar">
             <ul>
-                <li><a href="#"><span class="icon">🏠</span><span class="text">Home</span></a></li>
+                <li><a href="#"><span class="icon">🏠</span><span class="text">Dashboard</span></a></li>
                 <li><a href="#"><span class="icon">📝</span><span class="text">Appointments</span></a></li>
                 <li><a href="#"><span class="icon">📋</span><span class="text">Records</span></a></li>
-                <li><a href="#"><span class="icon">⚙️</span><span class="text">Settings</span></a></li>
+                <li><a href="#"><span class="icon">🗂️</span><span class="text">Archive</span></a></li>
+                <li><a href="#"><span class="icon">🔒</span><span class="text">Logout</span></a></li>
             </ul>
         </nav>
 
         <div class="content">
             <h2>Dashboard Content</h2>
             <p>Welcome to the dashboard!</p>
+
+            <!-- Buttons for Total Appointments, Completed Appointments, Pending Appointments -->
+            <div class="stats-container">
+                <button class="stat-button">Total Appointments</button>
+                <button class="stat-button">Completed Appointments</button>
+                <button class="stat-button">Pending Appointments</button>
+            </div>
         </div>
     </div>
 
